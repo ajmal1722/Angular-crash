@@ -11,11 +11,8 @@ import { ButtonComponent } from '../button/button.component';
 
 export class HeaderComponent {
   title: string = 'Task Tracker';
-  content: string = 'Add';
 
-  constructor() { }
-
-  ngOnInit(): void {
-
+  toggleAddTask() {
+    console.log('Toggle add task');
   }
 }
