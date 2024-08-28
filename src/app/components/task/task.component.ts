@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TaskService } from '../../services/task.service';
 import { TaskItemComponent } from '../task-item/task-item.component';
+import { AddTaskComponent } from '../add-task/add-task.component';
 import { TaskInterface } from '../../data/TaskInterface';
+import { SharedModule } from '../../modules/shared/shared.module';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-task',
   standalone: true,
-  imports: [CommonModule, TaskItemComponent],
+  imports: [CommonModule, TaskItemComponent, AddTaskComponent, ],
   templateUrl: './task.component.html',
   styleUrl: './task.component.css'
 })
