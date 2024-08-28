@@ -27,4 +27,11 @@ export class TaskComponent {
       return 
     })
   }
+
+  toggleReminder (task: TaskInterface) {
+    // Toggle the reminder property
+    task.reminder = !task.reminder;
+    // Call updateTaskReminder to save the changes
+    this.taskService.updateTaskReminder(task).subscribe()
+  }
 }

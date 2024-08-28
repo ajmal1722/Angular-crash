@@ -14,9 +14,15 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class TaskItemComponent {
   @Input() task!: TaskInterface
   @Output() onDeleteTask: EventEmitter<TaskInterface> = new EventEmitter()
+  @Output() onToggleTask: EventEmitter<TaskInterface> = new EventEmitter();
+
   faTimes = faTimes;
 
   onDelete (task: TaskInterface) {
     this.onDeleteTask.emit(task)
+  }
+
+  onToggle (task: TaskInterface) {
+    this.onToggleTask.emit(task)
   }
 }
