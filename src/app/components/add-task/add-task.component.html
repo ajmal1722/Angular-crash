@@ -2,6 +2,7 @@
     <div class="form-control">
         <label for="text">Task</label>
         <input 
+            [(ngModel)]="text"
             type="text" 
             name="text" 
             id="text" 
@@ -11,6 +12,7 @@
     <div class="form-control">
         <label for="day">Day & Time</label>
         <input 
+            [(ngModel)]="day"
             type="text" 
             name="day" 
             id="day" 
@@ -20,6 +22,7 @@
     <div class="form-control form-control-check">
         <label for="reminder">Set Reminder</label>
         <input 
+            [(ngModel)]="reminder"
             type="checkbox" 
             name="reminder" 
             id="reminder" 
